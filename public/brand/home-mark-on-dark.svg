@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TenantFirst Management">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#191A20"/>
+  <rect x="3.2" y="3.2" width="57.6" height="57.6" rx="14.8" fill="none" stroke="#2A2B33" stroke-width="0.9"/>
+  <path d="M10 16C16 8.5 24 5.2 32 5.2" fill="none" stroke="#F4F4F5" stroke-opacity="0.07" stroke-width="8" stroke-linecap="round"/>
+  <path d="M32 10.5 49.5 25.8H14.5Z" fill="#ECECF1"/>
+  <path d="M32 13.4 45.6 25.8H18.4Z" fill="#08090B" fill-opacity="0.22"/>
+  <path d="M32 11.15l1.05 1.05-1.05 1.05-1.05-1.05Z" fill="#08090B" fill-opacity="0.3"/>
+  <g fill="#F4F4F5">
+    <rect x="15.8" y="25.6" width="32.4" height="2.5" rx="0.5"/>
+    <rect x="17.4" y="28.4" width="3.7" height="16.4" rx="0.7"/>
+    <rect x="25.9" y="28.4" width="3.7" height="16.4" rx="0.7"/>
+    <rect x="34.4" y="28.4" width="3.7" height="16.4" rx="0.7"/>
+    <rect x="42.9" y="28.4" width="3.7" height="16.4" rx="0.7"/>
+    <rect x="15.8" y="44.6" width="32.4" height="2.3" rx="0.5"/>
+  </g>
+  <g fill="#08090B">
+    <rect x="22.35" y="31.15" width="8.5" height="1.7" rx="0.45"/>
+    <rect x="25.75" y="31.15" width="1.7" height="10.85" rx="0.45"/>
+    <rect x="34.05" y="31.15" width="1.7" height="10.85" rx="0.45"/>
+    <rect x="34.05" y="31.15" width="7.7" height="1.7" rx="0.45"/>
+    <rect x="34.05" y="35.85" width="5.55" height="1.55" rx="0.45"/>
+  </g>
+  <circle cx="31.05" cy="39.55" r="0.85" fill="#08090B"/>
+  <rect x="30.62" y="40.15" width="0.86" height="1.55" rx="0.35" fill="#08090B"/>
+  <path d="M20 54.7V53.15h8V51.6h8V50.05h8V54.7Z" fill="#B4B5BE"/>
+  <path d="M20.2 53.15h7.6M28.2 51.6h7.6M36.2 50.05h7.6" fill="none" stroke="#F4F4F5" stroke-width="0.7" stroke-linecap="square" opacity="0.55"/>
+</svg>
