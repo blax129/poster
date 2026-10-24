@@ -13,6 +13,12 @@ Open the URL Vite prints. The manager workspace is `/manager`. Set a strong `ADM
 
 Validated applications are forwarded to Formspree at `https://formspree.io/f/mnjeolkq` before they are saved to the portal. Set `FORMSPREE_ENDPOINT` on the server to override this endpoint. Configure Formspree notifications and recipient settings in your Formspree account.
 
+## Static hosting
+
+Build with `npm run build` and publish `dist/`. If `/api/applications` is absent (404/405 or an HTML page), the browser sends the application directly to `https://formspree.io/f/mnjeolkq` and displays a delivery confirmation. Formspree must accept browser submissions from your deployed domain. Static-only hosting does not run SQLite, the manager API, or applicant status/trial endpoints; those require the Node server described below. Direct Formspree submissions are stored in Formspree, not the local portal database.
+
+Network failures and server errors do not automatically resend to Formspree, avoiding duplicate deliveries when the original outcome is uncertain.
+
 ## Production
 
 ```sh
