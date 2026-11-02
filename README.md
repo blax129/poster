@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open the URL Vite prints. The manager workspace is `/manager`. Set a strong `ADMIN_TOKEN` environment variable before starting the server to enable manager access. No default password is shipped. For example, generate a key using `openssl rand -hex 32`, then set it in your host's secret configuration. Restart the API after changing environment variables.
+Open the URL Vite prints. The manager API requires authentication. Set a strong `ADMIN_TOKEN` environment variable before starting the server to enable manager access. No default password is shipped. For example, generate a key using `openssl rand -hex 32`, then set it in your host's secret configuration. Restart the API after changing environment variables.
 
 Validated applications are forwarded to Formspree at `https://formspree.io/f/mnjeolkq` before they are saved to the portal. Set `FORMSPREE_ENDPOINT` on the server to override this endpoint. Configure Formspree notifications and recipient settings in your Formspree account.
 
@@ -32,18 +32,18 @@ Keep `data/portal.sqlite` and its WAL files on persistent storage and back them 
 
 ## Included workflow
 
-- Public role overview and frequently asked questions.
-- Three-step application capturing name, email, Facebook experience, device, availability and acknowledgement.
-- Applicant portal using a generated private access key. Applicants must save this key; it grants access to their application. The browser retains it only for the current tab session.
-- Private manager dashboard: review applicants, assign up to three trials, review submitted post links, request changes and approve trials.
-- Trial compensation is deliberately unspecified on the public page. The manager must provide terms with each assignment before work begins.
-- Three approved trials are required before the manager can mark an applicant accepted. Acceptance is never automatic.
-- Assigned photo folders and Facebook groups open as external links. This app does not post to Facebook or request Facebook credentials.
+- Public role overview: $600/week, temporary, 13–15 listings every day including weekends, completed around the applicant’s schedule.
+- Four application sections followed by review and submit. Payment preferences are handled during onboarding, not in the application.
+- Application review remains required. Approved applicants start immediately, with no trial stage.
+- The authenticated manager API can mark an applicant `Ready to start` directly. Historical trial records remain stored, but trial assignment/submission endpoints and applicant trial UI are removed. Existing application decisions are not automatically changed.
+- Hiring contact: Katherine Riordan, (302) 312-5230, katherineriordanppm@gmail.com.
+- Main company website: https://tenantfirstmgt.com. General contact: tenantfirstmgt@gmail.com, (208) 286-6794. General and hiring contacts are labeled separately.
+- Applicant-specific privacy notice at `/privacy.html`, describing actual Formspree delivery, optional portal storage, browser storage, and contact for data requests. No retention period or unverified office address is asserted.
 
-## Before public launch
+## Remaining owner details
 
-Confirm role/pay terms, trial compensation, data-retention policy, and your business contact information. Configure hosting, HTTPS, a strong manager secret, persistent storage, backups and request rate limits at the reverse proxy. Formspree forwards applications to your configured account; no email or SMS notifications are sent to applicants, who check the portal for updates. Applicant key recovery and deletion requests are currently handled manually by the business, not automated UI actions.
+Confirm Facebook account requirements and any check-in expectations directly with applicants. Configure Formspree notifications and domain acceptance for the new domain. The new domain name and DNS setup remain pending.
 
 ## Validation
 
-`npm run build` builds the React application. `npm test` checks API authentication, field validation, Formspree delivery and failure handling, application persistence, trial submission and acceptance gating against isolated temporary services.
+`npm run build` builds the React application. `npm test` checks application validation, delivery and failure handling, authorization, and immediate readiness after manager approval, using isolated temporary services. No test submissions are sent to production Formspree.
