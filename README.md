@@ -36,8 +36,8 @@ Keep `data/portal.sqlite` and its WAL files on persistent storage and back them 
 - Four application sections followed by review and submit. Payment preferences are handled during onboarding, not in the application.
 - Application review remains required. Approved applicants start immediately, with no trial stage.
 - The authenticated manager API can mark an applicant `Ready to start` directly. Historical trial records remain stored, but trial assignment/submission endpoints and applicant trial UI are removed. Existing application decisions are not automatically changed.
-- Hiring contact: Katherine Riordan, text (208) 286-6794, katherineriordanppm@gmail.com.
-- Main company website: https://tenantfirstmgt.com. General contact: tenantfirstmgt@gmail.com, (208) 286-6794. General and hiring contacts are labeled separately.
+- Hiring contact: Katherine Riordan, text (815) 320-9596, katherineriordanppm@gmail.com.
+- Main company website: https://tenantfirstmgt.com. General contact: tenantfirstmgt@gmail.com, (815) 320-9596. General and hiring contacts are labeled separately.
 - Applicant-specific privacy notice at `/privacy.html`, describing actual Formspree delivery, optional portal storage, browser storage, and contact for data requests. No retention period or unverified office address is asserted.
 
 ## Remaining owner details
