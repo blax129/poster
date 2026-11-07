@@ -2,7 +2,7 @@ export const sections = [
  {title:'Contact details',description:'Tell us how to address you and reach you about your application.',fields:[
   {name:'name',label:'Full name',type:'text',max:100,autocomplete:'name'},
   {name:'email',label:'Email address',type:'email',max:200,autocomplete:'email'},
-  {name:'phone',label:'Phone number (optional)',type:'tel',max:50,autocomplete:'tel',optional:true},
+  {name:'phone',label:'Phone number',type:'tel',max:50,autocomplete:'tel'},
  ]},
  {title:'Facebook experience',description:'We welcome different experience levels. Give us an accurate picture of how you use Facebook.',fields:[
   {name:'experience',label:'How familiar are you with Facebook groups?',options:['I regularly join groups and create posts','I have used groups a little','I am new to Facebook groups']},
