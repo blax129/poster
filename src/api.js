@@ -1,4 +1,18 @@
 export class ApiUnavailableError extends Error {}
+const emailJsServiceId='service_n9hq4ej';
+const emailJsTemplateId='template_0psm95b';
+const emailJsPublicKey='VgJKKT6UW4yxwv7oE';
+
+async function sendApplicantConfirmation(answers){
+ if(typeof window==='undefined')return;
+ try{
+  const response=await fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:emailJsServiceId,template_id:emailJsTemplateId,user_id:emailJsPublicKey,template_params:{name:answers.name,email:answers.email}})});
+  if(!response.ok)console.warn('Applicant confirmation email was not sent:',await response.text());
+ }catch(error){console.warn('Applicant confirmation email was not sent:',error.message)}
+}
+
+function confirmApplicant(answers,result){void sendApplicantConfirmation(answers);return result}
+
 export async function api(path,method='GET',body,token){
  const response=await fetch('/api'+path,{method,headers:{Accept:'application/json','Content-Type':'application/json',...(token?{Authorization:`Bearer ${token}`}:{})},...(body?{body:JSON.stringify(body)}:{})});
  const raw=await response.text();
@@ -13,7 +27,7 @@ export async function submitApplication(answers){
  try{
   const result=await api('/applications','POST',answers);
   if(typeof result.token!=='string'||!result.token)throw new Error('The server did not confirm your application. Please contact Katherine before submitting again.');
-  return {token:result.token};
+  return confirmApplicant(answers,{token:result.token});
  }catch(error){
   // Only fall back when the API route is absent. Never resend after a network
   // failure or server error: the first request may already have been delivered.
@@ -22,5 +36,5 @@ export async function submitApplication(answers){
  const response=await fetch('https://formspree.io/f/mnjeolkq',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/json'},body:JSON.stringify({...answers,_subject:'New TenantFirst application',_replyto:answers.email})});
  let data;try{data=await response.json()}catch{throw new Error('Unable to confirm delivery. Please contact Katherine before submitting again.');}
  if(!response.ok||data?.ok!==true)throw new Error(data?.errors?.map(e=>e.message).filter(Boolean).join(' ')||'Your application could not be delivered. Please try again or contact Katherine.');
- return {delivered:true};
+ return confirmApplicant(answers,{delivered:true});
 }
