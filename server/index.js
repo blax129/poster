@@ -16,7 +16,7 @@ app.use((req,res,next)=>{res.set('Cache-Control','no-store');res.set('X-Content-
 const uid=()=>randomBytes(24).toString('hex');
 const text=(s,n=3000)=>typeof s==='string'?s.trim().slice(0,n):'';
 const url=s=>{try {const u=new URL(s);return u.protocol==='https:'?u.href:null}catch{return null}};
-const formspreeEndpoint=process.env.FORMSPREE_ENDPOINT??'https://formspree.io/f/mnjeolkq';
+const formspreeEndpoint=process.env.FORMSPREE_ENDPOINT??'https://formspree.io/f/mkjrwnyz';
 const record=r=>({id:r.id,created:r.created,status:r.status,...JSON.parse(r.data)});
 const assignments=id=>db.prepare('SELECT * FROM assignments WHERE applicant=? ORDER BY rowid').all(id).map(r=>({id:r.id,...JSON.parse(r.data)}));
 const admin=(req,res,next)=>{const expected=process.env.ADMIN_TOKEN;const got=req.headers.authorization?.replace(/^Bearer /,'')||'';if(!expected)return res.status(503).json({error:'Manager access is not configured. Set ADMIN_TOKEN on the server.'});if(got.length!==expected.length||!timingSafeEqual(Buffer.from(got),Buffer.from(expected)))return res.status(401).json({error:'Incorrect manager access key.'});next()};
