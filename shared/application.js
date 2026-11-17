@@ -11,13 +11,13 @@ export const sections = [
   {name:'groupRules',label:'How comfortable are you checking and following group posting rules?',options:['Comfortable doing this independently','I can do this with initial guidance','I would need training']},
   {name:'listingSkills',label:'Can you add photos, format a post, edit it, and copy its link?',options:['Yes, I can do all of these','I can do some and would like guidance','I would need help learning these tasks']}
  ]},
- {title:'Availability & work',description:'Complete approximately 10–14 listings each weekday, Monday through Friday, at times that fit your schedule. Work begins immediately after application approval, with no trial assignments. Tell us whether you can reliably meet the daily workload.',fields:[
+ {title:'Availability & work',description:'Complete approximately 10–12 listings each weekday, Monday through Friday, at times that fit your schedule. Work begins immediately after application approval, with no trial assignments. Tell us whether you can reliably meet the daily workload.',fields:[
   {name:'employment',label:'What is your current work situation?',options:['Employed full-time','Employed part-time','Self-employed or freelance','Not currently working','Other']},
   {name:'sevenDayAvailability',label:'Can you complete the daily listings Monday through Friday around your schedule?',options:['Yes, I can meet this Monday–Friday schedule','No, I cannot work Monday through Friday','I need to discuss my availability with Katherine']},
   {name:'dailyHours',label:'How much time can you reliably set aside each day?',options:['Less than 1 hour','1–2 hours','2–4 hours','More than 4 hours']},
     {name:'commitments',label:'How would you fit this role around your current work or other commitments?',type:'textarea',max:1500,placeholder:'Skip this question if you have no current work or other commitments.',optional:true},
   {name:'availability',label:'When can you start after application approval?',options:['Immediately after approval','Within one week','Within two weeks','I would need to agree on a start date']},
-  {name:'workload',label:'Can you consistently manage approximately 10–14 listings each weekday after approval?',options:['Yes','Yes, with initial guidance','I would like to discuss the workload']}
+  {name:'workload',label:'Can you consistently manage approximately 10–12 listings each weekday after approval?',options:['Yes','Yes, with initial guidance','I would like to discuss the workload']}
  ]},
  {title:'Setup & approach',description:'Tell us about your tools and how you would handle the day-to-day work.',fields:[
   {name:'device',label:'What device will you use for Facebook?',options:['Phone','Computer','Phone and computer']},

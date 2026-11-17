@@ -32,7 +32,7 @@ Keep `data/portal.sqlite` and its WAL files on persistent storage and back them 
 
 ## Included workflow
 
-- Public role overview: $500–$800/week, temporary, approximately 10–14 listings each weekday, completed around the applicant’s schedule.
+- Public role overview: $500–$800/week, temporary, approximately 10–12 listings each weekday, completed around the applicant’s schedule.
 - Four application sections followed by review and submit. Payment preferences are handled during onboarding, not in the application.
 - Application review remains required. Approved applicants start immediately, with no trial stage.
 - The authenticated manager API can mark an applicant `Ready to start` directly. Historical trial records remain stored, but trial assignment/submission endpoints and applicant trial UI are removed. Existing application decisions are not automatically changed.
