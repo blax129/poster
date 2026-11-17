@@ -34,3 +34,4 @@ header nav .text-button{display:none}
 .intro-context::after{content:'Remote · U.S.-based applicants · About 8–10 minutes to apply';display:block;margin-top:16px;color:var(--ink);font-size:12px;font-weight:600;letter-spacing:.02em}
 .brand-intro>.eyebrow{display:none}
 .brand-gallery:before{display:none}
+.trust-strip{display:none}
