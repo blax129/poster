@@ -33,3 +33,4 @@ header nav .text-button{display:none}
 .hero-subheading{margin:-8px 0 20px;color:var(--muted);font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}@media(max-width:700px){.hero-subheading{margin:-8px 0 18px;font-size:11px;letter-spacing:.1em}}
 .intro-context::after{content:'Remote · U.S.-based applicants · About 8–10 minutes to apply';display:block;margin-top:16px;color:var(--ink);font-size:12px;font-weight:600;letter-spacing:.02em}
 .brand-intro>.eyebrow{display:none}
+.brand-gallery:before{display:none}
