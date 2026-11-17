@@ -13,7 +13,7 @@ export const sections = [
  ]},
  {title:'Availability & work',description:'Complete approximately 10–12 listings each weekday, Monday through Friday, at times that fit your schedule. Work begins immediately after application approval, with no trial assignments. Tell us whether you can reliably meet the daily workload.',fields:[
   {name:'employment',label:'What is your current work situation?',options:['Employed full-time','Employed part-time','Self-employed or freelance','Not currently working','Other']},
-  {name:'sevenDayAvailability',label:'Can you complete the daily listings Monday through Friday around your schedule?',options:['Yes, I can meet this Monday–Friday schedule','No, I cannot work Monday through Friday','I need to discuss my availability with Katherine']},
+  {name:'sevenDayAvailability',label:'Can you complete the daily listings Monday through Friday around your schedule?',options:['Yes, I can meet this Monday–Friday schedule','No, I cannot work Monday through Friday','I need to discuss my availability with our team']},
   {name:'dailyHours',label:'How much time can you reliably set aside each day?',options:['Less than 1 hour','1–2 hours','2–4 hours','More than 4 hours']},
     {name:'commitments',label:'How would you fit this role around your current work or other commitments?',type:'textarea',max:1500,placeholder:'Skip this question if you have no current work or other commitments.',optional:true},
   {name:'availability',label:'When can you start after application approval?',options:['Immediately after approval','Within one week','Within two weeks','I would need to agree on a start date']},
@@ -24,7 +24,7 @@ export const sections = [
   {name:'internet',label:'Do you have reliable internet access?',options:['Yes, consistently','Usually, with occasional interruptions','Not consistently']},
   {name:'updates',label:'How often can you check for assignment updates and feedback?',options:['Several times during my working hours','At the beginning and end of my working hours','Once a day','I would need to agree on a check-in schedule']},
   {name:'motivation',label:'Why are you interested in this role?',type:'textarea',max:1500},
-  {name:'questions',label:'Questions for Katherine (optional)',type:'textarea',max:1500,optional:true}
+  {name:'questions',label:'Questions for our team (optional)',type:'textarea',max:1500,optional:true}
  ]},
 
 ];
