@@ -19,12 +19,13 @@ export const sections = [
   {name:'availability',label:'When can you start after application approval?',options:['Immediately after approval','Within one week','Within two weeks','I would need to agree on a start date']},
   {name:'workload',label:'Can you consistently manage approximately 10–12 listings every day, including weekends, after approval?',options:['Yes','Yes, with initial guidance','I would like to discuss the workload']}
  ]},
- {title:'Setup & approach',description:'Tell us about your tools and how you would handle the day-to-day work.',fields:[
+ {title:'Setup & approach',description:'Tell us about your tools, how you would handle the day-to-day work, and which payment method you would prefer to discuss if approved. Do not enter account numbers or other payment details.',fields:[
   {name:'device',label:'What device will you use for Facebook?',options:['Phone','Computer','Phone and computer']},
   {name:'internet',label:'Do you have reliable internet access?',options:['Yes, consistently','Usually, with occasional interruptions','Not consistently']},
   {name:'updates',label:'How often can you check for assignment updates and feedback?',options:['Several times during my working hours','At the beginning and end of my working hours','Once a day','I would need to agree on a check-in schedule']},
   {name:'motivation',label:'Why are you interested in this role?',type:'textarea',max:1500},
-  {name:'questions',label:'Questions for our team (optional)',type:'textarea',max:1500,optional:true}
+  {name:'questions',label:'Questions for our team (optional)',type:'textarea',max:1500,optional:true},
+  {name:'paymentPreference',label:'If approved, which payment method would you prefer to discuss?',options:['Bank transfer','PayPal','Cash App','Zelle','Other / I would like to discuss this']}
  ]},
 
 ];
